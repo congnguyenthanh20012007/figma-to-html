@@ -1,0 +1,108 @@
+/* Set css basic */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Sen", sans-serif;
+  font-optical-sizing: auto; */
+}
+
+/* Bat dau voi css thuoc tinh  */
+/* ==========common=========== */
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  width: 1170px;
+  /* can giua */
+  margin-left: auto;
+  margin-right: auto;
+  /* khi co nho viewport thi k bi mất */
+  max-width: calc(100% - 48px);
+}
+
+.btn {
+  /* Do cac class .btn la the a nen la display inline do do can chuyen sang inset-block de thay doi kich co tren duoi */
+  display: inline-block;
+  /* Set chieu rong toi thieu cua nut bam */
+  min-width: 118px;
+  /* Set khoang dem 2 ben nut bam */
+  padding: 0px 16px;
+  /* Set chieu cao nut bam */
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+
+/* =========header========= */
+.header {
+  background-color: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky;
+  /* Khi keo xuong thi no se cach top 36px - 28px */
+  top: -28px;
+}
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+  /* Cai 8px o duoi de khi keo xuong dưới chế độ sticky nó sẽ k liền với mấy thằng content sticky ở dưới, còn việc cách thằng content ngay sát ở dưới thì cài thằng đấy cách header chứ k cài ở đây */
+}
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  color: #5f5b53;
+  /* text-align: center; Vì các a là khối inline nên mặc định nó là center rồi nên cũng vất*/
+  /* font-size: normal;
+  font-weight: 400; 2 thằng này mặc định trình duyệt nó đã có rồi nên cũng vất */
+  padding: 8px 21px;
+  position: relative;
+}
+
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  /* font-weight: 600; Do dùng cái này khi di vào thì phần tử sẽ to hơn dẫn tới các phần tử khác bị di chuyển */
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a::after {
+  /* Do after mac dinh la inline nen k the dung thuoc tinh width va height duoc */
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+  /* Cai dat sao cho dau gach duoi hien o ngay duoi chu home */
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  /* Mai sau hoc Javascript thi no se tu dong gan cai class active vao phan tu minh nhan vao, khi day dau gach duoi k mac dinh o home nua */
+}
+
+.header .btn-sign-up {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
