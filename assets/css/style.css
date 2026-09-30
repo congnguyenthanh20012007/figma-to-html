@@ -538,7 +538,7 @@ a {
 }
 
 
-/* =============================feature============================= */
+/* =============================feature1============================= */
 .features {
   margin-top: 135px;
   padding: 65px 0;
@@ -555,7 +555,7 @@ a {
   gap: 30px;
 }
 
-.features .image {
+.features.ft1 .image {
   width: 270px;
   height: 404px;
   border-radius: 16px;
@@ -567,7 +567,7 @@ a {
 }
 
 
-.features .content {
+.features.ft1 .content {
   width: 41%;
   display: flex;
   flex-direction: column;
@@ -591,5 +591,156 @@ a {
 .features .cta-btn:hover {
   background: var(--primary-color);
   color: #FFF;
+}
 
+
+.features .body.bottom {
+  display: flex;
+}
+
+
+/* =====================feature2==================== */
+
+.features.ft2 {
+  margin-top: 75px;
+  padding: 65px;
+}
+
+.features.ft2 .content {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ft2 .image img {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+/* Dung row reverse =)) */
+
+
+/* =============================blog============================= */
+
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4FF;
+}
+
+.blogs .blog-top {
+  text-align: center;
+}
+
+.blogs .blog-top .desc {
+  line-height: 1.75;
+  color: #696262;
+  width: 454px;
+  font-size: 1.6rem;
+  margin: 16px auto 0;
+}
+
+.blogs .blog-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.blogs .item {
+  width: calc(33.33% - 20px);
+  border-radius: 16px;
+  background: #FFF;
+  height: 467px;
+  flex-shrink: 0;
+}
+
+.blogs .item:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.blogs .item .thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blogs .item .date {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 1.8571428571428572;
+  color: #5f5b53;
+  padding-bottom: 12px;
+}
+
+/* before giong chuc nang la thang con cua thang date */
+.blogs .item .date::before {
+  content: "";
+  display: inline-block;
+  margin-right: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.blogs .item .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  right: -27px;
+  /* thanng con luon co ben phai dai hon thang cha 27px */
+  height: 1px;
+  border-radius: 0.5px 0.5px 0.5px 0.5px;
+  background: #e2dfdaFF;
+}
+
+.blogs .item .title {
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+
+.blogs .item .btn {
+  margin-top: 12px;
+  font-size: 1.4rem;
+}
+
+.blogs .item .btn:hover {
+  background: var(--primary-color);
+}
+
+.blogs .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.blogs .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53FF;
+  cursor: pointer;
+}
+
+.blogs .dot.active {
+  background: var(--primary-color);
+  cursor: default;
 }
