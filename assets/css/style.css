@@ -20,7 +20,7 @@ body {
 }
 
 /* Bat dau voi css thuoc tinh  */
-/* ==========common=========== */
+/* ============================================================common===================================================== */
 a {
   text-decoration: none;
 }
@@ -64,6 +64,27 @@ a {
   opacity: 0.9;
   cursor: pointer;
 }
+
+/* Hien dau 3 cham khi van ban qua dai */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+
+
+
+
 
 /* =========header========= */
 .header {
@@ -365,6 +386,7 @@ a {
 }
 
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #E2DFDA;
   background: #FFF;
@@ -434,4 +456,140 @@ a {
 
 .popular .course-item .btn-book:hover {
   background: var(--primary-color);
+}
+
+
+
+
+
+/* =========================feedback======================= */
+
+.feedback {
+  margin-top: 135px;
+  background: #2e2100FF;
+  padding: 96px 0;
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.feedback-item {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: all ease 0.5s;
+}
+
+.feedback .info .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback .content blockquote {
+  color: #FFF;
+  font-style: italic;
+  line-height: 1.5384615384615385;
+  font-size: 2.6rem;
+}
+
+.feedback .info .member-name {
+  color: #f7f7f7FF;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.4166666666666667;
+  margin-top: 18px;
+}
+
+.feedback-item .info .desc {
+  color: #bfbcb2FF;
+  font-size: 1.4rem;
+  line-height: 1.8571428571428572;
+  margin-top: 4px;
+}
+
+.feedback-item .dots {
+  margin-top: 28px;
+  display: flex;
+  gap: 6px;
+}
+
+.feedback-item .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+
+.feedback-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700FF;
+  cursor: pointer;
+}
+
+
+/* =============================feature============================= */
+.features {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+
+.features .body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+
+.features .image {
+  width: 270px;
+  height: 404px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.features .lower {
+  margin-top: 34px;
+}
+
+
+.features .content {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .desc {
+  margin-top: 16px;
+  line-height: 1.75;
+  color: #5f5b53FF;
+}
+
+.features .cta-btn {
+  width: 137px;
+  height: 50px;
+  border-radius: 26px;
+  margin-top: 32px;
+  border: none;
+}
+
+.features .cta-btn:hover {
+  background: var(--primary-color);
+  color: #FFF;
+
 }
